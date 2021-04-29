@@ -135,3 +135,6 @@ dmypy.json
 temp/
 input/
 output/
+
+# For notebook
+notebook/
