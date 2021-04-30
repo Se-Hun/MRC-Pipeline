@@ -20,7 +20,7 @@ At this project, Transformers Pipelines are trained by KorQuAD(The Korean Questi
 ### 입력 데이터 파일 준비
 
 * 다음과 같은 형태의 JSON 파일을 준비하고 파일명을 `qg.json`으로 수정
-* JSON 파일은 보편적인 MRC Q/A Task의 입력인 context와 question으로 구성된다.
+* JSON 파일은 보편적인 MRC Q/A Task의 입력인 `context`와 질문의 리스트인 `questions`로 구성한다.
 
 ```json
 {
