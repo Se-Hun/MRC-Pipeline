@@ -10,16 +10,21 @@ from utils.models import get_tokenizer, get_model
 
 MODEL_CLASSES = ["koelectra-base-v2", "koelectra-small-v2"]
 
-def run_predict(pipeline, fns):
-    in_fn = fns["input"]
-    out_fn = fns["output"]
-
+def get_input_data(in_fn):
     in_data = []
     with open(in_fn, "r", encoding="utf-8") as f:
         in_data = json.load(f)
 
     context = in_data["context"]
     questions = in_data["questions"]
+
+    return context, questions
+
+def run_predict(pipeline, fns):
+    in_fn = fns["input"]
+    out_fn = fns["output"]
+
+    context, questions = get_input_data(in_fn)
 
     out_data = {
         "context" : context,
