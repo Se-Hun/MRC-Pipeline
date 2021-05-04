@@ -8,7 +8,7 @@ from transformers import pipeline
 from utils.common import prepare_dir
 from utils.models import get_tokenizer, get_model
 
-MODEL_CLASSES = ["koelectra-base-v2", "koelectra-small-v2"]
+MODEL_CLASSES = ["koelectra-base-v2", "koelectra-small-v2", "koelectra-small-v3", "koelectra-base-v3", "multilingual-bert"]
 
 def get_input_data(in_fn):
     in_data = []
