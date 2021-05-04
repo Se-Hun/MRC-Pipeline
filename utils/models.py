@@ -1,4 +1,4 @@
-from transformers import ElectraTokenizer, ElectraForQuestionAnswering, pipeline
+from transformers import ElectraTokenizer, ElectraForQuestionAnswering, BertTokenizer, BertForQuestionAnswering
 
 def get_tokenizer(model_type):
     if model_type == "koelectra-small-v2":
@@ -18,7 +18,7 @@ def get_tokenizer(model_type):
         return tokenizer
 
     elif model_type == "multilingual-bert":
-        tokenizer = ElectraTokenizer.from_pretrained("bert-base-multilingual-cased")
+        tokenizer = BertTokenizer.from_pretrained("bert-base-multilingual-cased")
         return tokenizer
 
     else:
@@ -43,7 +43,7 @@ def get_model(model_type):
         return model
 
     elif model_type == "multilingual-bert":
-        tokenizer = ElectraForQuestionAnswering.from_pretrained("bert-base-multilingual-cased")
+        tokenizer = BertForQuestionAnswering.from_pretrained("bert-base-multilingual-cased")
         return tokenizer
 
     else:
