@@ -1,14 +1,17 @@
 # MRC-Pipeline
 Transformers Pipeline about MRC(Question Answering).
 
-At this project, Transformers Pipelines are trained by KorQuAD(The Korean Question Answering Dataset).
+At this project, Transformers Pipelines was trained by KorQuAD(The Korean Question Answering Dataset).
 
 ## Available Pipeline
 
 | Model                   | Link            |
 | ----------------------- | --------------- |
-| koelectra-base-v2       | [koelectra-base-v2-finetuned-korquad](https://huggingface.co/monologg/koelectra-base-v2-finetuned-korquad)              | 
-| koelectra-small-v2      | [koelectra-small-v2-distilled-korquad-384](https://huggingface.co/monologg/koelectra-small-v2-distilled-korquad-384)              | 
+| koelectra-small-v2      | [monologg/koelectra-small-v2-distilled-korquad-384](https://huggingface.co/monologg/koelectra-small-v2-distilled-korquad-384)              | 
+| koelectra-base-v2       | [monologg/koelectra-base-v2-finetuned-korquad](https://huggingface.co/monologg/koelectra-base-v2-finetuned-korquad)              | 
+| koelectra-small-v3      | [monologg/koelectra-small-v3-finetuned-korquad](https://huggingface.co/monologg/koelectra-small-v3-finetuned-korquad) |
+| koelectra-base-v3       | [monologg/koelectra-base-v3-finetuned-korquad](https://huggingface.co/monologg/koelectra-base-v3-finetuned-korquad) |
+| multilingual-bert       | [sangrimlee/bert-base-multilingual-cased-korquad]() |
 
 ## Requirements
 
@@ -45,8 +48,7 @@ $ python run_mrc_pipeline.py --model_type MODEL_TYPE --input_dir INPUT_DIR --out
 
 ## TODO list
 
-- [ ] 다른 transformer 기반의 모델들 추가
-
+- [x] 다른 transformer 기반의 모델들 추가
 
 ## References
 
