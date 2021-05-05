@@ -18,7 +18,7 @@ def get_tokenizer(model_type):
         return tokenizer
 
     elif model_type == "multilingual-bert":
-        tokenizer = BertTokenizer.from_pretrained("bert-base-multilingual-cased")
+        tokenizer = BertTokenizer.from_pretrained("sangrimlee/bert-base-multilingual-cased-korquad")
         return tokenizer
 
     else:
@@ -43,7 +43,7 @@ def get_model(model_type):
         return model
 
     elif model_type == "multilingual-bert":
-        tokenizer = BertForQuestionAnswering.from_pretrained("bert-base-multilingual-cased")
+        tokenizer = BertForQuestionAnswering.from_pretrained("sangrimlee/bert-base-multilingual-cased-korquad")
         return tokenizer
 
     else:
